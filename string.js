@@ -105,10 +105,11 @@ exports.containsSpecial =function(str){
     let hasSpecial=false;
     let special= [33,64,35,36,37,94,38,42];
     try{
-        for(let d=0; d<special.length; d++){
+        for(let d=0; d<str.length; d++){
             for(let e=0; e<special.length; e++){
-                if(d.charCodeAt(0)==e;){
-                    
+                if(d.charCodeAt(0)==special[e]){
+                    let hasSpecial=true;
+                    throw new PasswordMessage("has a special character");
                 }
             }
         }
